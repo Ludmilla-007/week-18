@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shorcut icon" href="https://cdn-icons-png.flaticon.com/512/6855/6855215.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опросник</title>
+    <style>
+        input:valid{
+            border-color: green;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Страница-опросник для обладателей котиков</h1>
+    <form>
+        <div><label for="name">Имя владельца</label>
+            <input type="text" id="name" placeholder="Имя владельца" required />*</div>
+        <div><label for="contacts">Контакты владельца</label>
+            <input type="text" id="contacts" placeholder="Контакты владельца"  required/>*</div>
+        <h2>Информация о ваших питомцах</h2>
+        <fieldset>
+            <legend>
+                <h3>Питомцы</h3>
+            </legend>
+
+            <div><label for="cat_name"> <b>Кличка питомца</b> </label>
+                <input type="text" id="cat_name" placeholder="Кличка питомца" required />*</div>
+            <div><label for="cat_breed" > <strong>Порода питомца</strong>
+                    <select required>
+                        <option value="cat breed">Абиссинская</option>
+                        <option value="cat breed">Американская</option>
+                        <option value="cat breed">Азиатская</option>
+                        <option value="cat breed">Австралийская</option>
+                        <option value="cat breed">Балийская</option>
+                        <option value="cat breed">Турецкая</option>
+                        <option value="cat breed">Сиамская</option>
+                        <option value="cat breed">Бенгальская</option>
+                        <option value="cat's name">Нет в списке
+                        </option>
+
+                    </select>*
+                </label>
+            </div>
+            <div> <label for="meal" aria-required="1" > <strong>Чем питается?</strong> *</label><br>
+                Влажный корм<input type="checkbox" /><br>
+                Сухой корм<input type="checkbox" />
+            </div>
+            <div><label for="sex"> <strong>Укажите пол питомца</strong> *</label><br>
+                Самка <input type="radio" name="sex" /><br>
+                Самец <input type="radio" name="sex" />
+            </div>
+
+            <div> <b>Комментарий владельца</b> <br>
+                <textarea rows="10" cols="40"></textarea>
+            </div>
+            <div>
+                Добавить фотографию питомца
+                <input type="file" required Выбрать файл />*
+            </div>
+            <button>Сохранить</button>
+
+
+        </fieldset>
+    </form>
+</body>
+
+</html>
