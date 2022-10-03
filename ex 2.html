@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #errorMessage{
+        color: red;
+    }   
+.registr,h1{
+display: flex;
+flex-direction: column;
+align-items:flex-start;
+
+}
+    </style>
+</head>
+<body>
+    <h1>Регистрация</h1>
+   <form novalidate>
+        <div class="registr">
+            
+    <div>
+    <label for="name">Имя </label>
+        <input type="text" id="name" placeholder="Имя"/></div>
+
+    <div>
+    <label for="name" >Фамилия </label>
+    <input type="text" id="surname" placeholder="Фамилия "/></div>
+
+   <div> <label for="name">Придумайте логин</label>
+    <input type="text" id="login" placeholder="Придумайте логин"/></div>
+
+        <div><label for="name">Придумайте пароль</label>
+    <input type="password" id="password" placeholder="Придумайте пароль"/></div>
+
+    <div> <label for="name">Введите номер телефона </label>
+        <input type="text" id="phonenumber" placeholder="Введите номер телефона"/></div>
+
+    <div><button onclick="checkAll();">Зарегистрироваться</button></div>
+    <div>Нажимая кнопку зарегистрироваться:
+        <div>
+            <input type="checkbox">Я принимаю условия <a href="">Пользовательского соглашения</a>
+        </div>
+    </form>
+        <div id="errorMessage"></div>
+        <div id="welcome"></div>
+    </div>
+</div>
+<script src="./ex 2.js"></script>
+</body>
+</html>
