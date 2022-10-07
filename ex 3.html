@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+           grid-template-columns: 1fr;
+           grid-template-rows: 1fr 1fr 3fr 3fr 1fr;
+           border-color: aqua; 
+            border-style: solid;
+        }
+        button{
+            background: wheat;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="chat"></div>   
+        <form action="">
+            <div>
+                <label for="author">Имя *
+                    <span id="authorError"></span>
+                </label>
+            </div>
+            <div>
+            <input type="text" name="author" id="author" value="" class="inputs"></div>
+            <div>
+                <label for="photo">Фото *</label>
+                <span id="photoError"></span>
+            </div>
+            <div><img data-src="path/to/image"></div>
+            <div>
+                <label for="comment">Комментарий:
+                    <span id="commentError"></span>
+                </label>
+            </div>
+            <div>
+                <textarea name="comment" id="comment" class="inputs"></textarea>
+            </div>
+            <div>
+                <input  name="button" type="button" id="button" value="Отправить" onclick="checkMessage();">
+            </div>
+         </form>
+    
+    
+   
+       
+     
+       </div>
+    
+   
+    <script>
+       document.addEventListener("DOMContentLoaded",function(event)
+{
+    let name= localStorage.getItem('name');
+    if(name!=null){
+        document.getElementById("author").value=name;
+    }
+})
+function sendMessage(author,comment){
+    document.getElementById("chat").innerHTML+=`<span class='author'>${author}:</span><span>${comment}</span><br>`;
+}
+
+function checkMessage(){
+    let author = document.getElementById("author").value;
+    let comment = document.getElementById("comment").value;
+
+    if(localStorage.getItem('name')==null){
+        localStorage.setItem('name',author);
+    }
+    sendMessage(author,comment);
+}
+$('img').imageCaching();
+      </script>
+</body>
+</html>

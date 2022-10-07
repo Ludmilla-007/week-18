@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inputs{
+            width: 250px;
+        }
+        .error{
+            color:red;
+            font-size: smaller;
+        }
+        .author{
+            color:green;
+            font-weight: bold;
+            padding-right: 10px;
+        }
+        #chat{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+ <h1>Chat</h1>
+ <div id="chat"></div>   
+ <form action="">
+    <div>
+        <label for="author">Имя *
+            <span id="authorError"></span>
+        </label>
+    </div>
+    <div>
+    <input type="text" name="author" id="author" value="" class="inputs"></div>
+    <div>
+        <label for="comment">Комментарий:
+            <span id="commentError"></span>
+        </label>
+    </div>
+    <div>
+        <textarea name="comment" id="comment" class="inputs"></textarea>
+    </div>
+    <div>
+        <input  name="button" type="button" id="button" value="Отправить" onclick="checkMessage();">
+    </div>
+ </form>
+ <script src="practice2.js"></script>
+</body>
+</html>
