@@ -32,7 +32,7 @@
     function generateTasks(){
         let optionString = "";
         for (let task of tasks){
-            optionString +=`<div><input type = 'checkbox' onchange = 'finishTask (this)'><span>${task}</span><button>Delete</button></div>`;
+            optionString +=`<div><input type = 'checkbox' onchange = 'finishTask (this)'><span>${task}</span></div>`;
         }
         document.getElementById("container").innerHTML = optionString;
     
